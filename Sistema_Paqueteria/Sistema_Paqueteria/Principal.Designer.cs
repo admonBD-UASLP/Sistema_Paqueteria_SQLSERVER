@@ -103,6 +103,9 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sucursalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tB_cel_Clie = new System.Windows.Forms.TextBox();
+            this.labelCel_Cliente = new System.Windows.Forms.Label();
+            this.labelAP_Cliente = new System.Windows.Forms.Label();
             this.tB_dir_Clie = new System.Windows.Forms.TextBox();
             this.labelDir_Cliente = new System.Windows.Forms.Label();
             this.tB_Am_Clie = new System.Windows.Forms.TextBox();
@@ -128,15 +131,79 @@
             this.buttonInsClie = new System.Windows.Forms.Button();
             this.tB_Nombre_Clie = new System.Windows.Forms.TextBox();
             this.labelCliente = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.sucursalesTableAdapter = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.SucursalesTableAdapter();
             this.tableAdapterManager = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.TableAdapterManager();
             this.ciudadesTableAdapter = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.CiudadesTableAdapter();
             this.estadosTableAdapter = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.EstadosTableAdapter();
             this.clientesTableAdapter = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.ClientesTableAdapter();
-            this.labelAP_Cliente = new System.Windows.Forms.Label();
-            this.tB_cel_Clie = new System.Windows.Forms.TextBox();
-            this.labelCel_Cliente = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.labelNomCond = new System.Windows.Forms.Label();
+            this.labelApCond = new System.Windows.Forms.Label();
+            this.labelAmCond = new System.Windows.Forms.Label();
+            this.labelDirCond = new System.Windows.Forms.Label();
+            this.tB_Nom_Cond = new System.Windows.Forms.TextBox();
+            this.tB_Ap_Cond = new System.Windows.Forms.TextBox();
+            this.tB_Am_Cond = new System.Windows.Forms.TextBox();
+            this.tB_Dir_Cond = new System.Windows.Forms.TextBox();
+            this.labelTelCond = new System.Windows.Forms.Label();
+            this.tBTelCond = new System.Windows.Forms.TextBox();
+            this.tBCelCond = new System.Windows.Forms.TextBox();
+            this.labelCelCond = new System.Windows.Forms.Label();
+            this.tBLicCond = new System.Windows.Forms.TextBox();
+            this.labelLicCond = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboUniCond = new System.Windows.Forms.ComboBox();
+            this.comboTipoCond = new System.Windows.Forms.ComboBox();
+            this.conductoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.conductoresTableAdapter = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.ConductoresTableAdapter();
+            this.conductoresDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.tBDescCond = new System.Windows.Forms.TextBox();
+            this.tBTipoCond = new System.Windows.Forms.TextBox();
+            this.labelDesVeh = new System.Windows.Forms.Label();
+            this.labelTipoCond = new System.Windows.Forms.Label();
+            this.tBModVeh = new System.Windows.Forms.TextBox();
+            this.tBMatVeh = new System.Windows.Forms.TextBox();
+            this.labelModveh = new System.Windows.Forms.Label();
+            this.labelMatriculaVeh = new System.Windows.Forms.Label();
+            this.tBMarcaVeh = new System.Windows.Forms.TextBox();
+            this.labelMarcaVeh = new System.Windows.Forms.Label();
+            this.buttonInsCond = new System.Windows.Forms.Button();
+            this.buttonDelCond = new System.Windows.Forms.Button();
+            this.buttonModCond = new System.Windows.Forms.Button();
+            this.buttonInsTipoC = new System.Windows.Forms.Button();
+            this.buttonElimCond = new System.Windows.Forms.Button();
+            this.buttonModTipoC = new System.Windows.Forms.Button();
+            this.buttonModVeh = new System.Windows.Forms.Button();
+            this.buttonElimVeh = new System.Windows.Forms.Button();
+            this.buttonInsVeh = new System.Windows.Forms.Button();
+            this.tipoConductorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoConductorTableAdapter = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.TipoConductorTableAdapter();
+            this.tipoConductorDataGridView = new System.Windows.Forms.DataGridView();
+            this.vehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vehiculosTableAdapter = new Sistema_Paqueteria.PaqueteriaDataSetTableAdapters.VehiculosTableAdapter();
+            this.vehiculosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -153,6 +220,16 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conductoresDataGridView)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoConductorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoConductorDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -248,29 +325,29 @@
             // sucursalesToolStripMenuItem
             // 
             this.sucursalesToolStripMenuItem.Name = "sucursalesToolStripMenuItem";
-            this.sucursalesToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.sucursalesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.sucursalesToolStripMenuItem.Text = "Sucursales";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(149, 6);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(149, 6);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // toolStripSeparator2
@@ -814,6 +891,31 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tB_cel_Clie
+            // 
+            this.tB_cel_Clie.Location = new System.Drawing.Point(476, 94);
+            this.tB_cel_Clie.Name = "tB_cel_Clie";
+            this.tB_cel_Clie.Size = new System.Drawing.Size(172, 20);
+            this.tB_cel_Clie.TabIndex = 7;
+            // 
+            // labelCel_Cliente
+            // 
+            this.labelCel_Cliente.AutoSize = true;
+            this.labelCel_Cliente.Location = new System.Drawing.Point(399, 98);
+            this.labelCel_Cliente.Name = "labelCel_Cliente";
+            this.labelCel_Cliente.Size = new System.Drawing.Size(39, 13);
+            this.labelCel_Cliente.TabIndex = 17;
+            this.labelCel_Cliente.Text = "Celular";
+            // 
+            // labelAP_Cliente
+            // 
+            this.labelAP_Cliente.AutoSize = true;
+            this.labelAP_Cliente.Location = new System.Drawing.Point(45, 65);
+            this.labelAP_Cliente.Name = "labelAP_Cliente";
+            this.labelAP_Cliente.Size = new System.Drawing.Size(84, 13);
+            this.labelAP_Cliente.TabIndex = 16;
+            this.labelAP_Cliente.Text = "Apellido Paterno";
+            // 
             // tB_dir_Clie
             // 
             this.tB_dir_Clie.Location = new System.Drawing.Point(136, 120);
@@ -1016,6 +1118,20 @@
             this.labelCliente.TabIndex = 0;
             this.labelCliente.Text = "Nombre";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1171, 535);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // sucursalesTableAdapter
             // 
             this.sucursalesTableAdapter.ClearBeforeFill = true;
@@ -1054,40 +1170,585 @@
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
             // 
-            // labelAP_Cliente
+            // label14
             // 
-            this.labelAP_Cliente.AutoSize = true;
-            this.labelAP_Cliente.Location = new System.Drawing.Point(45, 65);
-            this.labelAP_Cliente.Name = "labelAP_Cliente";
-            this.labelAP_Cliente.Size = new System.Drawing.Size(84, 13);
-            this.labelAP_Cliente.TabIndex = 16;
-            this.labelAP_Cliente.Text = "Apellido Paterno";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(26, 55);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 13);
+            this.label14.TabIndex = 27;
             // 
-            // tB_cel_Clie
+            // groupBox4
             // 
-            this.tB_cel_Clie.Location = new System.Drawing.Point(476, 94);
-            this.tB_cel_Clie.Name = "tB_cel_Clie";
-            this.tB_cel_Clie.Size = new System.Drawing.Size(172, 20);
-            this.tB_cel_Clie.TabIndex = 7;
+            this.groupBox4.Controls.Add(this.buttonModCond);
+            this.groupBox4.Controls.Add(this.buttonDelCond);
+            this.groupBox4.Controls.Add(this.buttonInsCond);
+            this.groupBox4.Controls.Add(this.conductoresDataGridView);
+            this.groupBox4.Controls.Add(this.comboTipoCond);
+            this.groupBox4.Controls.Add(this.comboUniCond);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.tBLicCond);
+            this.groupBox4.Controls.Add(this.labelLicCond);
+            this.groupBox4.Controls.Add(this.tBCelCond);
+            this.groupBox4.Controls.Add(this.labelCelCond);
+            this.groupBox4.Controls.Add(this.tBTelCond);
+            this.groupBox4.Controls.Add(this.labelTelCond);
+            this.groupBox4.Controls.Add(this.tB_Dir_Cond);
+            this.groupBox4.Controls.Add(this.tB_Am_Cond);
+            this.groupBox4.Controls.Add(this.tB_Ap_Cond);
+            this.groupBox4.Controls.Add(this.tB_Nom_Cond);
+            this.groupBox4.Controls.Add(this.labelDirCond);
+            this.groupBox4.Controls.Add(this.labelAmCond);
+            this.groupBox4.Controls.Add(this.labelApCond);
+            this.groupBox4.Controls.Add(this.labelNomCond);
+            this.groupBox4.Location = new System.Drawing.Point(6, 15);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(461, 514);
+            this.groupBox4.TabIndex = 28;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Conductores";
             // 
-            // labelCel_Cliente
+            // labelNomCond
             // 
-            this.labelCel_Cliente.AutoSize = true;
-            this.labelCel_Cliente.Location = new System.Drawing.Point(399, 98);
-            this.labelCel_Cliente.Name = "labelCel_Cliente";
-            this.labelCel_Cliente.Size = new System.Drawing.Size(39, 13);
-            this.labelCel_Cliente.TabIndex = 17;
-            this.labelCel_Cliente.Text = "Celular";
+            this.labelNomCond.AutoSize = true;
+            this.labelNomCond.Location = new System.Drawing.Point(6, 27);
+            this.labelNomCond.Name = "labelNomCond";
+            this.labelNomCond.Size = new System.Drawing.Size(44, 13);
+            this.labelNomCond.TabIndex = 0;
+            this.labelNomCond.Text = "Nombre";
             // 
-            // tabPage3
+            // labelApCond
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1171, 535);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.labelApCond.AutoSize = true;
+            this.labelApCond.Location = new System.Drawing.Point(6, 53);
+            this.labelApCond.Name = "labelApCond";
+            this.labelApCond.Size = new System.Drawing.Size(84, 13);
+            this.labelApCond.TabIndex = 1;
+            this.labelApCond.Text = "Apellido Paterno";
+            // 
+            // labelAmCond
+            // 
+            this.labelAmCond.AutoSize = true;
+            this.labelAmCond.Location = new System.Drawing.Point(6, 75);
+            this.labelAmCond.Name = "labelAmCond";
+            this.labelAmCond.Size = new System.Drawing.Size(86, 13);
+            this.labelAmCond.TabIndex = 2;
+            this.labelAmCond.Text = "Apellido Materno";
+            // 
+            // labelDirCond
+            // 
+            this.labelDirCond.AutoSize = true;
+            this.labelDirCond.Location = new System.Drawing.Point(6, 97);
+            this.labelDirCond.Name = "labelDirCond";
+            this.labelDirCond.Size = new System.Drawing.Size(52, 13);
+            this.labelDirCond.TabIndex = 3;
+            this.labelDirCond.Text = "Dirección";
+            // 
+            // tB_Nom_Cond
+            // 
+            this.tB_Nom_Cond.Location = new System.Drawing.Point(91, 27);
+            this.tB_Nom_Cond.Name = "tB_Nom_Cond";
+            this.tB_Nom_Cond.Size = new System.Drawing.Size(113, 20);
+            this.tB_Nom_Cond.TabIndex = 4;
+            // 
+            // tB_Ap_Cond
+            // 
+            this.tB_Ap_Cond.Location = new System.Drawing.Point(91, 50);
+            this.tB_Ap_Cond.Name = "tB_Ap_Cond";
+            this.tB_Ap_Cond.Size = new System.Drawing.Size(113, 20);
+            this.tB_Ap_Cond.TabIndex = 5;
+            // 
+            // tB_Am_Cond
+            // 
+            this.tB_Am_Cond.Location = new System.Drawing.Point(91, 74);
+            this.tB_Am_Cond.Name = "tB_Am_Cond";
+            this.tB_Am_Cond.Size = new System.Drawing.Size(113, 20);
+            this.tB_Am_Cond.TabIndex = 6;
+            // 
+            // tB_Dir_Cond
+            // 
+            this.tB_Dir_Cond.Location = new System.Drawing.Point(91, 97);
+            this.tB_Dir_Cond.Name = "tB_Dir_Cond";
+            this.tB_Dir_Cond.Size = new System.Drawing.Size(113, 20);
+            this.tB_Dir_Cond.TabIndex = 7;
+            // 
+            // labelTelCond
+            // 
+            this.labelTelCond.AutoSize = true;
+            this.labelTelCond.Location = new System.Drawing.Point(6, 125);
+            this.labelTelCond.Name = "labelTelCond";
+            this.labelTelCond.Size = new System.Drawing.Size(49, 13);
+            this.labelTelCond.TabIndex = 8;
+            this.labelTelCond.Text = "Teléfono";
+            // 
+            // tBTelCond
+            // 
+            this.tBTelCond.Location = new System.Drawing.Point(91, 125);
+            this.tBTelCond.Name = "tBTelCond";
+            this.tBTelCond.Size = new System.Drawing.Size(113, 20);
+            this.tBTelCond.TabIndex = 9;
+            // 
+            // tBCelCond
+            // 
+            this.tBCelCond.Location = new System.Drawing.Point(306, 30);
+            this.tBCelCond.Name = "tBCelCond";
+            this.tBCelCond.Size = new System.Drawing.Size(113, 20);
+            this.tBCelCond.TabIndex = 11;
+            // 
+            // labelCelCond
+            // 
+            this.labelCelCond.AutoSize = true;
+            this.labelCelCond.Location = new System.Drawing.Point(210, 30);
+            this.labelCelCond.Name = "labelCelCond";
+            this.labelCelCond.Size = new System.Drawing.Size(39, 13);
+            this.labelCelCond.TabIndex = 10;
+            this.labelCelCond.Text = "Celular";
+            // 
+            // tBLicCond
+            // 
+            this.tBLicCond.Location = new System.Drawing.Point(306, 53);
+            this.tBLicCond.Name = "tBLicCond";
+            this.tBLicCond.Size = new System.Drawing.Size(113, 20);
+            this.tBLicCond.TabIndex = 13;
+            // 
+            // labelLicCond
+            // 
+            this.labelLicCond.AutoSize = true;
+            this.labelLicCond.Location = new System.Drawing.Point(210, 53);
+            this.labelLicCond.Name = "labelLicCond";
+            this.labelLicCond.Size = new System.Drawing.Size(47, 13);
+            this.labelLicCond.TabIndex = 12;
+            this.labelLicCond.Text = "Licencia";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(210, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Unidad";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(210, 100);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Tipo de Conductor";
+            // 
+            // comboUniCond
+            // 
+            this.comboUniCond.FormattingEnabled = true;
+            this.comboUniCond.Location = new System.Drawing.Point(306, 75);
+            this.comboUniCond.Name = "comboUniCond";
+            this.comboUniCond.Size = new System.Drawing.Size(113, 21);
+            this.comboUniCond.TabIndex = 16;
+            // 
+            // comboTipoCond
+            // 
+            this.comboTipoCond.FormattingEnabled = true;
+            this.comboTipoCond.Location = new System.Drawing.Point(306, 99);
+            this.comboTipoCond.Name = "comboTipoCond";
+            this.comboTipoCond.Size = new System.Drawing.Size(113, 21);
+            this.comboTipoCond.TabIndex = 17;
+            // 
+            // conductoresBindingSource
+            // 
+            this.conductoresBindingSource.DataMember = "Conductores";
+            this.conductoresBindingSource.DataSource = this.paqueteriaDataSet;
+            // 
+            // conductoresTableAdapter
+            // 
+            this.conductoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // conductoresDataGridView
+            // 
+            this.conductoresDataGridView.AllowUserToAddRows = false;
+            this.conductoresDataGridView.AutoGenerateColumns = false;
+            this.conductoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.conductoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30});
+            this.conductoresDataGridView.DataSource = this.conductoresBindingSource;
+            this.conductoresDataGridView.Location = new System.Drawing.Point(0, 204);
+            this.conductoresDataGridView.Name = "conductoresDataGridView";
+            this.conductoresDataGridView.Size = new System.Drawing.Size(449, 220);
+            this.conductoresDataGridView.TabIndex = 18;
+            this.conductoresDataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.conductoresDataGridView_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "IdConductor";
+            this.dataGridViewTextBoxColumn21.HeaderText = "IdConductor";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "ApellidoPaterno";
+            this.dataGridViewTextBoxColumn23.HeaderText = "ApellidoPaterno";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "ApellidoMaterno";
+            this.dataGridViewTextBoxColumn24.HeaderText = "ApellidoMaterno";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "Telefono";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Celular";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Celular";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "Licencia";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Licencia";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "IdUnidad";
+            this.dataGridViewTextBoxColumn29.HeaderText = "IdUnidad";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "IdTipoConductor";
+            this.dataGridViewTextBoxColumn30.HeaderText = "IdTipoConductor";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.tipoConductorDataGridView);
+            this.groupBox5.Controls.Add(this.buttonModTipoC);
+            this.groupBox5.Controls.Add(this.buttonElimCond);
+            this.groupBox5.Controls.Add(this.buttonInsTipoC);
+            this.groupBox5.Controls.Add(this.tBDescCond);
+            this.groupBox5.Controls.Add(this.tBTipoCond);
+            this.groupBox5.Controls.Add(this.labelDesVeh);
+            this.groupBox5.Controls.Add(this.labelTipoCond);
+            this.groupBox5.Location = new System.Drawing.Point(473, 15);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(343, 514);
+            this.groupBox5.TabIndex = 29;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tipo Conductores";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.vehiculosDataGridView);
+            this.groupBox6.Controls.Add(this.buttonModVeh);
+            this.groupBox6.Controls.Add(this.buttonElimVeh);
+            this.groupBox6.Controls.Add(this.buttonInsVeh);
+            this.groupBox6.Controls.Add(this.tBMarcaVeh);
+            this.groupBox6.Controls.Add(this.labelMarcaVeh);
+            this.groupBox6.Controls.Add(this.tBModVeh);
+            this.groupBox6.Controls.Add(this.labelMatriculaVeh);
+            this.groupBox6.Controls.Add(this.tBMatVeh);
+            this.groupBox6.Controls.Add(this.labelModveh);
+            this.groupBox6.Location = new System.Drawing.Point(822, 15);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(349, 514);
+            this.groupBox6.TabIndex = 30;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Vehículos";
+            // 
+            // tBDescCond
+            // 
+            this.tBDescCond.Location = new System.Drawing.Point(116, 50);
+            this.tBDescCond.Name = "tBDescCond";
+            this.tBDescCond.Size = new System.Drawing.Size(113, 20);
+            this.tBDescCond.TabIndex = 9;
+            // 
+            // tBTipoCond
+            // 
+            this.tBTipoCond.Location = new System.Drawing.Point(116, 27);
+            this.tBTipoCond.Name = "tBTipoCond";
+            this.tBTipoCond.Size = new System.Drawing.Size(113, 20);
+            this.tBTipoCond.TabIndex = 8;
+            // 
+            // labelDesVeh
+            // 
+            this.labelDesVeh.AutoSize = true;
+            this.labelDesVeh.Location = new System.Drawing.Point(15, 53);
+            this.labelDesVeh.Name = "labelDesVeh";
+            this.labelDesVeh.Size = new System.Drawing.Size(63, 13);
+            this.labelDesVeh.TabIndex = 7;
+            this.labelDesVeh.Text = "Descripción";
+            // 
+            // labelTipoCond
+            // 
+            this.labelTipoCond.AutoSize = true;
+            this.labelTipoCond.Location = new System.Drawing.Point(15, 27);
+            this.labelTipoCond.Name = "labelTipoCond";
+            this.labelTipoCond.Size = new System.Drawing.Size(95, 13);
+            this.labelTipoCond.TabIndex = 6;
+            this.labelTipoCond.Text = "Tipo de Conductor";
+            // 
+            // tBModVeh
+            // 
+            this.tBModVeh.Location = new System.Drawing.Point(107, 50);
+            this.tBModVeh.Name = "tBModVeh";
+            this.tBModVeh.Size = new System.Drawing.Size(113, 20);
+            this.tBModVeh.TabIndex = 13;
+            // 
+            // tBMatVeh
+            // 
+            this.tBMatVeh.Location = new System.Drawing.Point(107, 27);
+            this.tBMatVeh.Name = "tBMatVeh";
+            this.tBMatVeh.Size = new System.Drawing.Size(113, 20);
+            this.tBMatVeh.TabIndex = 12;
+            // 
+            // labelModveh
+            // 
+            this.labelModveh.AutoSize = true;
+            this.labelModveh.Location = new System.Drawing.Point(6, 53);
+            this.labelModveh.Name = "labelModveh";
+            this.labelModveh.Size = new System.Drawing.Size(42, 13);
+            this.labelModveh.TabIndex = 11;
+            this.labelModveh.Text = "Modelo";
+            // 
+            // labelMatriculaVeh
+            // 
+            this.labelMatriculaVeh.AutoSize = true;
+            this.labelMatriculaVeh.Location = new System.Drawing.Point(6, 27);
+            this.labelMatriculaVeh.Name = "labelMatriculaVeh";
+            this.labelMatriculaVeh.Size = new System.Drawing.Size(50, 13);
+            this.labelMatriculaVeh.TabIndex = 10;
+            this.labelMatriculaVeh.Text = "Matricula";
+            // 
+            // tBMarcaVeh
+            // 
+            this.tBMarcaVeh.Location = new System.Drawing.Point(107, 72);
+            this.tBMarcaVeh.Name = "tBMarcaVeh";
+            this.tBMarcaVeh.Size = new System.Drawing.Size(113, 20);
+            this.tBMarcaVeh.TabIndex = 15;
+            // 
+            // labelMarcaVeh
+            // 
+            this.labelMarcaVeh.AutoSize = true;
+            this.labelMarcaVeh.Location = new System.Drawing.Point(6, 75);
+            this.labelMarcaVeh.Name = "labelMarcaVeh";
+            this.labelMarcaVeh.Size = new System.Drawing.Size(37, 13);
+            this.labelMarcaVeh.TabIndex = 14;
+            this.labelMarcaVeh.Text = "Marca";
+            // 
+            // buttonInsCond
+            // 
+            this.buttonInsCond.Location = new System.Drawing.Point(6, 175);
+            this.buttonInsCond.Name = "buttonInsCond";
+            this.buttonInsCond.Size = new System.Drawing.Size(75, 23);
+            this.buttonInsCond.TabIndex = 19;
+            this.buttonInsCond.Text = "Insertar";
+            this.buttonInsCond.UseVisualStyleBackColor = true;
+            this.buttonInsCond.Click += new System.EventHandler(this.buttonInsCond_Click);
+            // 
+            // buttonDelCond
+            // 
+            this.buttonDelCond.Location = new System.Drawing.Point(129, 175);
+            this.buttonDelCond.Name = "buttonDelCond";
+            this.buttonDelCond.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelCond.TabIndex = 20;
+            this.buttonDelCond.Text = "Eliminar";
+            this.buttonDelCond.UseVisualStyleBackColor = true;
+            this.buttonDelCond.Click += new System.EventHandler(this.buttonDelCond_Click);
+            // 
+            // buttonModCond
+            // 
+            this.buttonModCond.Location = new System.Drawing.Point(266, 175);
+            this.buttonModCond.Name = "buttonModCond";
+            this.buttonModCond.Size = new System.Drawing.Size(75, 23);
+            this.buttonModCond.TabIndex = 21;
+            this.buttonModCond.Text = "Modificar";
+            this.buttonModCond.UseVisualStyleBackColor = true;
+            this.buttonModCond.Click += new System.EventHandler(this.buttonModCond_Click);
+            // 
+            // buttonInsTipoC
+            // 
+            this.buttonInsTipoC.Location = new System.Drawing.Point(250, 27);
+            this.buttonInsTipoC.Name = "buttonInsTipoC";
+            this.buttonInsTipoC.Size = new System.Drawing.Size(75, 23);
+            this.buttonInsTipoC.TabIndex = 22;
+            this.buttonInsTipoC.Text = "Insertar";
+            this.buttonInsTipoC.UseVisualStyleBackColor = true;
+            this.buttonInsTipoC.Click += new System.EventHandler(this.buttonInsTipoC_Click);
+            // 
+            // buttonElimCond
+            // 
+            this.buttonElimCond.Location = new System.Drawing.Point(250, 56);
+            this.buttonElimCond.Name = "buttonElimCond";
+            this.buttonElimCond.Size = new System.Drawing.Size(75, 23);
+            this.buttonElimCond.TabIndex = 23;
+            this.buttonElimCond.Text = "Eliminar";
+            this.buttonElimCond.UseVisualStyleBackColor = true;
+            this.buttonElimCond.Click += new System.EventHandler(this.buttonElimCond_Click);
+            // 
+            // buttonModTipoC
+            // 
+            this.buttonModTipoC.Location = new System.Drawing.Point(250, 87);
+            this.buttonModTipoC.Name = "buttonModTipoC";
+            this.buttonModTipoC.Size = new System.Drawing.Size(75, 23);
+            this.buttonModTipoC.TabIndex = 24;
+            this.buttonModTipoC.Text = "Modificar";
+            this.buttonModTipoC.UseVisualStyleBackColor = true;
+            this.buttonModTipoC.Click += new System.EventHandler(this.buttonModTipoC_Click);
+            // 
+            // buttonModVeh
+            // 
+            this.buttonModVeh.Location = new System.Drawing.Point(252, 82);
+            this.buttonModVeh.Name = "buttonModVeh";
+            this.buttonModVeh.Size = new System.Drawing.Size(75, 23);
+            this.buttonModVeh.TabIndex = 27;
+            this.buttonModVeh.Text = "Modificar";
+            this.buttonModVeh.UseVisualStyleBackColor = true;
+            this.buttonModVeh.Click += new System.EventHandler(this.buttonModVeh_Click);
+            // 
+            // buttonElimVeh
+            // 
+            this.buttonElimVeh.Location = new System.Drawing.Point(252, 51);
+            this.buttonElimVeh.Name = "buttonElimVeh";
+            this.buttonElimVeh.Size = new System.Drawing.Size(75, 23);
+            this.buttonElimVeh.TabIndex = 26;
+            this.buttonElimVeh.Text = "Eliminar";
+            this.buttonElimVeh.UseVisualStyleBackColor = true;
+            this.buttonElimVeh.Click += new System.EventHandler(this.buttonElimVeh_Click);
+            // 
+            // buttonInsVeh
+            // 
+            this.buttonInsVeh.Location = new System.Drawing.Point(252, 22);
+            this.buttonInsVeh.Name = "buttonInsVeh";
+            this.buttonInsVeh.Size = new System.Drawing.Size(75, 23);
+            this.buttonInsVeh.TabIndex = 25;
+            this.buttonInsVeh.Text = "Insertar";
+            this.buttonInsVeh.UseVisualStyleBackColor = true;
+            this.buttonInsVeh.Click += new System.EventHandler(this.buttonInsVeh_Click);
+            // 
+            // tipoConductorBindingSource
+            // 
+            this.tipoConductorBindingSource.DataMember = "TipoConductor";
+            this.tipoConductorBindingSource.DataSource = this.paqueteriaDataSet;
+            // 
+            // tipoConductorTableAdapter
+            // 
+            this.tipoConductorTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipoConductorDataGridView
+            // 
+            this.tipoConductorDataGridView.AllowUserToAddRows = false;
+            this.tipoConductorDataGridView.AutoGenerateColumns = false;
+            this.tipoConductorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tipoConductorDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33});
+            this.tipoConductorDataGridView.DataSource = this.tipoConductorBindingSource;
+            this.tipoConductorDataGridView.Location = new System.Drawing.Point(6, 204);
+            this.tipoConductorDataGridView.Name = "tipoConductorDataGridView";
+            this.tipoConductorDataGridView.Size = new System.Drawing.Size(337, 220);
+            this.tipoConductorDataGridView.TabIndex = 24;
+            this.tipoConductorDataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tipoConductorDataGridView_MouseClick);
+            // 
+            // vehiculosBindingSource
+            // 
+            this.vehiculosBindingSource.DataMember = "Vehiculos";
+            this.vehiculosBindingSource.DataSource = this.paqueteriaDataSet;
+            // 
+            // vehiculosTableAdapter
+            // 
+            this.vehiculosTableAdapter.ClearBeforeFill = true;
+            // 
+            // vehiculosDataGridView
+            // 
+            this.vehiculosDataGridView.AllowUserToAddRows = false;
+            this.vehiculosDataGridView.AutoGenerateColumns = false;
+            this.vehiculosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vehiculosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37});
+            this.vehiculosDataGridView.DataSource = this.vehiculosBindingSource;
+            this.vehiculosDataGridView.Location = new System.Drawing.Point(9, 204);
+            this.vehiculosDataGridView.Name = "vehiculosDataGridView";
+            this.vehiculosDataGridView.Size = new System.Drawing.Size(334, 220);
+            this.vehiculosDataGridView.TabIndex = 27;
+            this.vehiculosDataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.vehiculosDataGridView_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "IdUnidad";
+            this.dataGridViewTextBoxColumn34.HeaderText = "IdUnidad";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "Matricula";
+            this.dataGridViewTextBoxColumn35.HeaderText = "Matricula";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "Modelo";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Modelo";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "Marca";
+            this.dataGridViewTextBoxColumn37.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "IdTipoConductor";
+            this.dataGridViewTextBoxColumn31.HeaderText = "IdTipoConductor";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            this.dataGridViewTextBoxColumn31.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "Tipo";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "descripcion";
+            this.dataGridViewTextBoxColumn33.HeaderText = "descripcion";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
             // 
             // Principal
             // 
@@ -1123,6 +1784,20 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conductoresDataGridView)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoConductorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoConductorDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1237,6 +1912,73 @@
         private System.Windows.Forms.TextBox tB_cel_Clie;
         private System.Windows.Forms.Label labelCel_Cliente;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox comboTipoCond;
+        private System.Windows.Forms.ComboBox comboUniCond;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tBLicCond;
+        private System.Windows.Forms.Label labelLicCond;
+        private System.Windows.Forms.TextBox tBCelCond;
+        private System.Windows.Forms.Label labelCelCond;
+        private System.Windows.Forms.TextBox tBTelCond;
+        private System.Windows.Forms.Label labelTelCond;
+        private System.Windows.Forms.TextBox tB_Dir_Cond;
+        private System.Windows.Forms.TextBox tB_Am_Cond;
+        private System.Windows.Forms.TextBox tB_Ap_Cond;
+        private System.Windows.Forms.TextBox tB_Nom_Cond;
+        private System.Windows.Forms.Label labelDirCond;
+        private System.Windows.Forms.Label labelAmCond;
+        private System.Windows.Forms.Label labelApCond;
+        private System.Windows.Forms.Label labelNomCond;
+        private System.Windows.Forms.BindingSource conductoresBindingSource;
+        private PaqueteriaDataSetTableAdapters.ConductoresTableAdapter conductoresTableAdapter;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox tBModVeh;
+        private System.Windows.Forms.Label labelMatriculaVeh;
+        private System.Windows.Forms.TextBox tBMatVeh;
+        private System.Windows.Forms.Label labelModveh;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox tBDescCond;
+        private System.Windows.Forms.TextBox tBTipoCond;
+        private System.Windows.Forms.Label labelDesVeh;
+        private System.Windows.Forms.Label labelTipoCond;
+        private System.Windows.Forms.DataGridView conductoresDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.TextBox tBMarcaVeh;
+        private System.Windows.Forms.Label labelMarcaVeh;
+        private System.Windows.Forms.Button buttonModVeh;
+        private System.Windows.Forms.Button buttonElimVeh;
+        private System.Windows.Forms.Button buttonInsVeh;
+        private System.Windows.Forms.Button buttonModTipoC;
+        private System.Windows.Forms.Button buttonElimCond;
+        private System.Windows.Forms.Button buttonInsTipoC;
+        private System.Windows.Forms.Button buttonModCond;
+        private System.Windows.Forms.Button buttonDelCond;
+        private System.Windows.Forms.Button buttonInsCond;
+        private System.Windows.Forms.BindingSource tipoConductorBindingSource;
+        private PaqueteriaDataSetTableAdapters.TipoConductorTableAdapter tipoConductorTableAdapter;
+        private System.Windows.Forms.DataGridView tipoConductorDataGridView;
+        private System.Windows.Forms.BindingSource vehiculosBindingSource;
+        private PaqueteriaDataSetTableAdapters.VehiculosTableAdapter vehiculosTableAdapter;
+        private System.Windows.Forms.DataGridView vehiculosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
     }
 }
 

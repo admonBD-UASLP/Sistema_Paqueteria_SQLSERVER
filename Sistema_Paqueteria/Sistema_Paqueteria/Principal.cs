@@ -31,6 +31,8 @@ namespace Sistema_Paqueteria
         {
             actualizarComboEdos();
             actualizarComboSuc();
+            actualizaComboRepartidor();
+            actualizaComboUnidad();
         }
 
         private void sucursalesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -42,6 +44,12 @@ namespace Sistema_Paqueteria
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'paqueteriaDataSet.Vehiculos' table. You can move, or remove it, as needed.
+            this.vehiculosTableAdapter.Fill(this.paqueteriaDataSet.Vehiculos);
+            // TODO: This line of code loads data into the 'paqueteriaDataSet.TipoConductor' table. You can move, or remove it, as needed.
+            this.tipoConductorTableAdapter.Fill(this.paqueteriaDataSet.TipoConductor);
+            // TODO: This line of code loads data into the 'paqueteriaDataSet.Conductores' table. You can move, or remove it, as needed.
+            this.conductoresTableAdapter.Fill(this.paqueteriaDataSet.Conductores);
             // TODO: This line of code loads data into the 'paqueteriaDataSet.Clientes' table. You can move, or remove it, as needed.
             this.clientesTableAdapter.Fill(this.paqueteriaDataSet.Clientes);
             // TODO: This line of code loads data into the 'paqueteriaDataSet.Ciudades' table. You can move, or remove it, as needed.
@@ -188,6 +196,35 @@ namespace Sistema_Paqueteria
             comboCd_Suc.DataSource = dt;
         }
 
+        private void actualizaComboRepartidor()
+        {
+            DataTable dt = new DataTable();
+            c.Open();
+            string query = "SELECT IdTipoConductor, Tipo FROM Administracion.TipoConductor ORDER BY Tipo ASC";
+
+            SqlCommand cmd = new SqlCommand(query, c);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            c.Close();
+            comboTipoCond.DisplayMember = "Tipo";
+            comboTipoCond.ValueMember = "IdTipoConductor";
+            comboTipoCond.DataSource = dt;
+        }
+
+        private void actualizaComboUnidad()
+        {
+            DataTable dt = new DataTable();
+            c.Open();
+            string query = "SELECT IdUnidad, Matricula FROM Administracion.Vehiculos ORDER BY Matricula ASC";
+
+            SqlCommand cmd = new SqlCommand(query, c);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            c.Close();
+            comboUniCond.DisplayMember = "Matricula";
+            comboUniCond.ValueMember = "IdUnidad";
+            comboUniCond.DataSource = dt;
+        }
         private void buttInsCd_Click(object sender, EventArgs e)
         {
             if (textBoxCd.Text != "")
@@ -530,6 +567,350 @@ namespace Sistema_Paqueteria
             }
             else
                 MessageBox.Show("Seleccione un Estado de la lista");
+        }
+
+        private void buttonInsCond_Click(object sender, EventArgs e)
+        {
+            if (tB_Nom_Cond.Text != "" && tB_Ap_Cond.Text != "" && tB_Am_Cond.Text != "" && tB_Dir_Cond.Text != "" && tBTelCond.Text != "" && tBCelCond.Text != "" && tBLicCond.Text != "")
+            {
+                if(comboTipoCond.SelectedItem != null && comboUniCond.SelectedItem != null)
+                {
+                    try
+                    {
+                        String valor = comboTipoCond.SelectedValue.ToString();
+                        String valor2 = comboUniCond.SelectedValue.ToString();
+                        c.Open();
+                        cmd = new SqlCommand("INSERT INTO Administracion.Conductores (Nombre, ApellidoPaterno, ApellidoMaterno, Direccion, Telefono, Celular, Licencia, IdUnidad, IdTipoConductor) VALUES('" + tB_Nom_Cond.Text + "'" + "," + "'" + tB_Ap_Cond.Text + "'" + "," + "'" + tB_Am_Cond.Text + "'" + "," + "'" + tB_Dir_Cond.Text + "'" + "," + "'" + tBTelCond.Text + "'" + "," + "'" + tBCelCond.Text + "'" + ", " + "'" + tBLicCond.Text + "'"+", "+"'"+Convert.ToInt32(valor2)+"'"+", "+"'"+ Convert.ToInt32(valor) + "')", c);
+                        cmd.ExecuteNonQuery();
+                        c.Close();
+                        this.conductoresTableAdapter.Fill(this.paqueteriaDataSet.Conductores);
+                        MessageBox.Show("Inserción correcta", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        actualizarComboEdos();
+                        tB_Nom_Cond.Text = "";
+                        tB_Ap_Cond.Text = "";
+                        tB_Am_Cond.Text = "";
+                        tB_Dir_Cond.Text = "";
+                        tBTelCond.Text = "";
+                        tBCelCond.Text = "";
+                        tBLicCond.Text = "";
+                        tB_Nom_Cond.Focus();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        c.Close();
+                    }
+                }
+                else
+                    MessageBox.Show("Error: Seleccione valores de los comboBox");
+            }
+            else
+                MessageBox.Show("Error: LLene todos los campos");
+        }
+
+        private void buttonInsVeh_Click(object sender, EventArgs e)
+        {
+            if (tBMarcaVeh.Text != "" && tBMatVeh.Text != "" && tBModVeh.Text != "")
+            {
+                try
+                {
+                    c.Open();
+                    cmd = new SqlCommand("INSERT INTO Administracion.Vehiculos (Matricula, Modelo, Marca) VALUES('" + tBMatVeh.Text + "'" + "," + "'" + tBModVeh.Text + "'" + "," + "'" + tBMarcaVeh.Text +  "')", c);
+                    cmd.ExecuteNonQuery();
+                    c.Close();
+                    this.vehiculosTableAdapter.Fill(this.paqueteriaDataSet.Vehiculos);
+                    MessageBox.Show("Inserción correcta", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    textBoxSuc.Text = "";
+                    actualizarComboEdos();
+                    tBMarcaVeh.Text = "";
+                    tBMatVeh.Text = "";
+                    tBModVeh.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    c.Close();
+                }
+            }
+            else
+                MessageBox.Show("Error: LLene todos los campos");
+        }
+
+        private void vehiculosDataGridView_MouseClick(object sender, MouseEventArgs e)
+        {
+            tBMatVeh.Text = this.vehiculosDataGridView.CurrentRow.Cells[1].Value.ToString();
+            tBModVeh.Text = this.vehiculosDataGridView.CurrentRow.Cells[2].Value.ToString();
+            tBMarcaVeh.Text = this.vehiculosDataGridView.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void buttonElimVeh_Click(object sender, EventArgs e)
+        {
+            if (this.vehiculosDataGridView.CurrentRow != null)
+            {
+                try
+                {
+                    String id = this.vehiculosDataGridView.Rows[this.vehiculosDataGridView.CurrentRow.Index].Cells[0].Value.ToString();
+                    if (id != "")
+                    {
+                        c.Open();
+                        cmd = new SqlCommand("DELETE FROM Administracion.Vehiculos WHERE IdUnidad=" + Convert.ToInt32(id), c);
+                        cmd.ExecuteNonQuery();
+                        c.Close();
+                        this.vehiculosTableAdapter.Fill(this.paqueteriaDataSet.Vehiculos);
+                        MessageBox.Show("Eliminación correcta", "Eliminar", MessageBoxButtons.OK);
+                        updateCombos();
+                        tBMarcaVeh.Text = "";
+                        tBMatVeh.Text = "";
+                        tBModVeh.Text = "";
+                        tBMatVeh.Focus();
+                    }
+                    else
+                        MessageBox.Show("Seleccione una Unidad de la lista");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    c.Close();
+                }
+            }
+            else
+                MessageBox.Show("Selecciona una Unidad de la lista");
+        }
+
+        private void buttonModVeh_Click(object sender, EventArgs e)
+        {
+            if (this.vehiculosDataGridView.CurrentRow != null)
+            {
+                String id = this.vehiculosDataGridView.Rows[this.vehiculosDataGridView.CurrentRow.Index].Cells[0].Value.ToString();
+                if (id != "")
+                {
+                    if (tBMatVeh.Text != "" && tBMarcaVeh.Text != "" && tBModVeh.Text != "")
+                    {
+                        try
+                        {
+                            c.Open();
+                            cmd = new SqlCommand("UPDATE Administracion.Vehiculos SET Matricula='" + tBMatVeh.Text + "'" + ", " + "Modelo='" + tBModVeh.Text + "'" + ", " + "Marca='" + tBMarcaVeh.Text + "'" + " WHERE IdUnidad=" + id, c);
+                            cmd.ExecuteNonQuery();
+                            c.Close();
+                            this.vehiculosTableAdapter.Fill(this.paqueteriaDataSet.Vehiculos);
+                            MessageBox.Show("modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            updateCombos();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            c.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Todos los campos son requeridos, introduzca valores");
+                        textBoxEdo.Focus();
+                    }
+                }
+                else
+                    MessageBox.Show("Seleccione un estado");
+            }
+            else
+                MessageBox.Show("Seleccione un Estado de la lista");
+        }
+
+        private void buttonInsTipoC_Click(object sender, EventArgs e)
+        {
+            if (tBTipoCond.Text != "" && tBDescCond.Text != "")
+            {
+                try
+                {
+                    c.Open();
+                    cmd = new SqlCommand("INSERT INTO Administracion.TipoConductor (Tipo, descripcion) VALUES('" + tBTipoCond.Text + "'" + "," + "'" + tBDescCond.Text + "')", c);
+                    cmd.ExecuteNonQuery();
+                    c.Close();
+                    this.tipoConductorTableAdapter.Fill(this.paqueteriaDataSet.TipoConductor);
+                    MessageBox.Show("Inserción correcta", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    actualizarComboEdos();
+                    tBTipoCond.Text = "";
+                    tBDescCond.Text = "";
+                    tBTipoCond.Focus();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    c.Close();
+                }
+            }
+            else
+                MessageBox.Show("Error: LLene todos los campos");
+        }
+
+        private void buttonElimCond_Click(object sender, EventArgs e)
+        {
+            if (this.tipoConductorDataGridView.CurrentRow != null)
+            {
+                try
+                {
+                    String id = this.tipoConductorDataGridView.Rows[this.tipoConductorDataGridView.CurrentRow.Index].Cells[0].Value.ToString();
+                    if (id != "")
+                    {
+                        c.Open();
+                        cmd = new SqlCommand("DELETE FROM Administracion.TipoConductor WHERE IdTipoConductor=" + Convert.ToInt32(id), c);
+                        cmd.ExecuteNonQuery();
+                        c.Close();
+                        this.tipoConductorTableAdapter.Fill(this.paqueteriaDataSet.TipoConductor);
+                        MessageBox.Show("Eliminación correcta", "Eliminar", MessageBoxButtons.OK);
+                        updateCombos();
+                        tBTipoCond.Text = "";
+                        tBDescCond.Text = "";
+                        tBTipoCond.Focus();
+                    }
+                    else
+                        MessageBox.Show("Seleccione un Tipo de conductor de la lista");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    c.Close();
+                }
+            }
+            else
+                MessageBox.Show("Selecciona un Tipo de conductor de la lista");
+        }
+
+        private void buttonModTipoC_Click(object sender, EventArgs e)
+        {
+            if (this.tipoConductorDataGridView.CurrentRow != null)
+            {
+                String id = this.tipoConductorDataGridView.Rows[this.tipoConductorDataGridView.CurrentRow.Index].Cells[0].Value.ToString();
+                if (id != "")
+                {
+                    if (tBTipoCond.Text != null && tBDescCond.Text != "")
+                    {
+                        try
+                        {
+                            c.Open();
+                            cmd = new SqlCommand("UPDATE Administracion.TipoConductor SET Tipo='" + tBTipoCond.Text + "'" +", "+ "descripcion='"+tBDescCond.Text+"'"+" WHERE IdTipoConductor=" + id, c);
+                            cmd.ExecuteNonQuery();
+                            c.Close();
+                            this.tipoConductorTableAdapter.Fill(this.paqueteriaDataSet.TipoConductor);
+                            MessageBox.Show("modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            updateCombos();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            c.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Campo Estado Vacio");
+                        textBoxEdo.Focus();
+                    }
+                }
+                else
+                    MessageBox.Show("Seleccione un tipo de conductor");
+            }
+            else
+                MessageBox.Show("Seleccione un tipo de conductor de la lista");
+        }
+
+        private void tipoConductorDataGridView_MouseClick(object sender, MouseEventArgs e)
+        {
+            tBTipoCond.Text = this.tipoConductorDataGridView.CurrentRow.Cells[1].Value.ToString();
+            tBDescCond.Text = this.tipoConductorDataGridView.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void buttonDelCond_Click(object sender, EventArgs e)
+        {
+            if (this.conductoresDataGridView.CurrentRow != null)
+            {
+                try
+                {
+                    String id = this.conductoresDataGridView.Rows[this.conductoresDataGridView.CurrentRow.Index].Cells[0].Value.ToString();
+                    if (id != "")
+                    {
+                        c.Open();
+                        cmd = new SqlCommand("DELETE FROM Administracion.Conductores WHERE IdConductor=" + Convert.ToInt32(id), c);
+                        cmd.ExecuteNonQuery();
+                        c.Close();
+                        this.conductoresTableAdapter.Fill(this.paqueteriaDataSet.Conductores);
+                        MessageBox.Show("Eliminación correcta", "Eliminar", MessageBoxButtons.OK);
+                        updateCombos();
+                        tB_Nom_Cond.Text = "";
+                        tB_Ap_Cond.Text = "";
+                        tB_Am_Cond.Text = "";
+                        tB_Dir_Cond.Text = "";
+                        tBTelCond.Text = "";
+                        tBCelCond.Text = "";
+                        tBLicCond.Text = "";
+                        tB_Nom_Cond.Focus();
+                    }
+                    else
+                        MessageBox.Show("Seleccione un conductor de la lista");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    c.Close();
+                }
+            }
+            else
+                MessageBox.Show("Selecciona un conductor de la lista");
+        }
+
+        private void conductoresDataGridView_MouseClick(object sender, MouseEventArgs e)
+        {
+            tB_Nom_Cond.Text = this.conductoresDataGridView.CurrentRow.Cells[1].Value.ToString();
+            tB_Ap_Cond.Text = this.conductoresDataGridView.CurrentRow.Cells[2].Value.ToString();
+            tB_Am_Cond.Text = this.conductoresDataGridView.CurrentRow.Cells[3].Value.ToString();
+            tB_Dir_Cond.Text = this.conductoresDataGridView.CurrentRow.Cells[4].Value.ToString();
+            tBTelCond.Text = this.conductoresDataGridView.CurrentRow.Cells[5].Value.ToString();
+            tBCelCond.Text = this.conductoresDataGridView.CurrentRow.Cells[6].Value.ToString();
+            tBLicCond.Text = this.conductoresDataGridView.CurrentRow.Cells[7].Value.ToString();
+            comboUniCond.SelectedValue = this.conductoresDataGridView.CurrentRow.Cells[8].Value.ToString();
+            comboTipoCond.SelectedValue = this.conductoresDataGridView.CurrentRow.Cells[9].Value.ToString();
+        }
+
+        private void buttonModCond_Click(object sender, EventArgs e)
+        {
+            if (this.conductoresDataGridView.CurrentRow != null)
+            {
+                String id = this.conductoresDataGridView.Rows[this.conductoresDataGridView.CurrentRow.Index].Cells[0].Value.ToString();
+                if (id != "")
+                {
+                    if (tB_Nom_Cond.Text != "" && tB_Ap_Cond.Text != "" && tB_Am_Cond.Text != "" && tB_Dir_Cond.Text != "" && tBTelCond.Text != "" && tBCelCond.Text != "" && tBLicCond.Text != "")
+                    {
+                        if (comboTipoCond.SelectedItem != null && comboUniCond.SelectedItem != null)
+                        {
+                            try
+                            {
+                                c.Open();
+                                cmd = new SqlCommand("UPDATE Administracion.Conductores SET Nombre='" + tB_Nom_Cond.Text + "'" + ", " + "ApellidoPaterno='" + tB_Ap_Cond.Text + "'" + ", " + "ApellidoMaterno='" + tB_Am_Cond.Text + "'" + ", " + "Direccion='" + tB_Dir_Cond.Text + "'" + ", " + "Telefono='" + tBTelCond.Text + "'" + ", " + "Celular='" + tBCelCond.Text + "'" + ", " + "Licencia='" + tBLicCond.Text + "'" +", "+"IdUnidad='"+comboUniCond.SelectedValue+"'"+", "+ "IdTipoConductor='"+comboTipoCond.SelectedValue+"'"+ " WHERE IdConductor=" + id, c);
+                                cmd.ExecuteNonQuery();
+                                c.Close();
+                                this.conductoresTableAdapter.Fill(this.paqueteriaDataSet.Conductores);
+                                MessageBox.Show("modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                                updateCombos();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                c.Close();
+                            }
+                        }
+                        else
+                            MessageBox.Show("Seleccione un valor en los comboBox");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Todos los campos son requeridos, introduzca valores");
+                        textBoxEdo.Focus();
+                    }
+                }
+                else
+                    MessageBox.Show("Seleccione un conductor");
+            }
+            else
+                MessageBox.Show("Seleccione un Conductor de la lista");
         }
     }
 }
