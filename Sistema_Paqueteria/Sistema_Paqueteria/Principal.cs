@@ -21,5 +21,10 @@ namespace Sistema_Paqueteria
         {
             tabControl1.SelectedTab = tabPage2;
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
